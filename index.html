@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hệ thống thi trắc nghiệm</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Hệ thống thi trắc nghiệm</h1>
+  <form id="quizForm">
+    <label for="fullName">Họ và tên:</label>
+    <input type="text" id="fullName" required><br>
+
+    <label for="dateOfBirth">Ngày tháng năm sinh:</label>
+    <input type="date" id="dateOfBirth" required><br>
+
+    <label for="studentID">Mã sinh viên:</label>
+    <input type="text" id="studentID" required><br>
+
+    <label for="class">Lớp:</label>
+    <input type="text" id="class" required><br>
+
+    <button type="button" onclick="startQuiz()">Bắt đầu</button>
+  </form>
+
+  <div id="questionContainer" style="display: none;"></div>
+
+  <div id="resultContainer" style="display: none;">
+    <h2>Kết quả bài làm</h2>
+    <div id="answersContainer"></div>
+  </div>
+
+  <script>
+    // JavaScript để xử lý logic và hiển thị câu hỏi, kết quả
+    const quizForm = document.getElementById('quizForm');
+    const questionContainer = document.getElementById('questionContainer');
+    const resultContainer = document.getElementById('resultContainer');
+    const answersContainer = document.getElementById('answersContainer');
+
+    function startQuiz() {
+      // Lấy thông tin từ người dùng
+      const fullName = document.getElementById('fullName').value;
+      const dateOfBirth = document.getElementById('dateOfBirth').value;
+      const studentID = document.getElementById('studentID').value;
+      const studentClass = document.getElementById('class').value;
+
+        // Chuyển hướng sang trang câu hỏi
+        window.location.href = "question.html";
+}
+    
+
+    
+  </script>
+</body>
+</html>
